@@ -2,7 +2,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+<<<<<<< HEAD
 import { HttpClientModule } from '@angular/common/http';
+=======
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+>>>>>>> develop
 import { RouterModule, Routes } from '@angular/router';
 
 //import required components
@@ -23,9 +27,17 @@ import { BooksService } from './services/books.service';
 const appRoutes: Routes = [
   { path: 'auth/signup', component: SignupComponent },
   { path: 'auth/signin', component: SigninComponent },
+<<<<<<< HEAD
   { path: 'books', component: BookListComponent },
   { path: 'books/new', component: BookFormComponent },
   { path: 'books/view/:id', component: SingleBookComponent }
+=======
+  { path: 'books', canActivate: [AuthGuardService], component: BookListComponent },
+  { path: 'books/new', canActivate: [AuthGuardService], component: BookFormComponent },
+  { path: 'books/view/:id', canActivate: [AuthGuardService], component: SingleBookComponent },
+  { path: '', redirectTo: 'books', pathMatch: 'full' },
+  { path: '**', redirectTo: 'books' }
+>>>>>>> develop
 ];
 
 @NgModule({
@@ -43,7 +55,11 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+<<<<<<< HEAD
     RouterModule.forRoot(appRoutes)
+=======
+    RouterModule.forRoot(appRoutes),
+>>>>>>> develop
   ],
   providers: [AuthService, BooksService, AuthGuardService],
   bootstrap: [AppComponent]

@@ -19,7 +19,13 @@
     "@angular/platform-browser": "~10.0.9",
     "@angular/platform-browser-dynamic": "~10.0.9",
     "@angular/router": "~10.0.9",
+<<<<<<< HEAD
     "bootstrap": "^4.5.2",
+=======
+    "@ngx-translate/core": "^13.0.0",
+    "bootstrap": "^4.5.2",
+    "firebase": "^7.18.0",
+>>>>>>> develop
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
