@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
-=======
->>>>>>> 24ccf76600e22f4954c0a35a9a2c2a2d861681a3
 
 @Component({
   selector: 'app-signin',
@@ -13,7 +10,6 @@ import { Router } from '@angular/router';
 })
 export class SigninComponent implements OnInit {
 
-<<<<<<< HEAD
   // user are going to provide information to create an account, so we use reactive forms
   signinForm: FormGroup;
   //this is to display an error message returned by auth service
@@ -58,11 +54,6 @@ export class SigninComponent implements OnInit {
         this.errorMessage = error;
       }
     );
-=======
-  constructor() { }
-
-  ngOnInit(): void {
->>>>>>> 24ccf76600e22f4954c0a35a9a2c2a2d861681a3
   }
 
 }
