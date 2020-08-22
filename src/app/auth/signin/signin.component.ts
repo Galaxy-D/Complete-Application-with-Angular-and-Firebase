@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
+>>>>>>> develop
 =======
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
@@ -14,10 +20,13 @@ import { Router } from '@angular/router';
 export class SigninComponent implements OnInit {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   constructor() { }
 
   ngOnInit(): void {
 =======
+=======
+>>>>>>> develop
   // user are going to provide information to create an account, so we use reactive forms
   signinForm: FormGroup;
   //this is to display an error message returned by auth service
@@ -62,6 +71,9 @@ export class SigninComponent implements OnInit {
         this.errorMessage = error;
       }
     );
+<<<<<<< HEAD
+>>>>>>> develop
+=======
 >>>>>>> develop
   }
 

@@ -20,11 +20,26 @@
     "@angular/platform-browser-dynamic": "~10.0.9",
     "@angular/router": "~10.0.9",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "bootstrap": "^4.5.2",
 =======
     "@ngx-translate/core": "^13.0.0",
     "bootstrap": "^4.5.2",
     "firebase": "^7.18.0",
+>>>>>>> develop
+=======
+    "@ngx-translate/core": "^13.0.0",
+    "bootstrap": "^4.5.2",
+    "firebase": "^7.18.0",
+=======
+<<<<<<< HEAD
+    "@ngx-translate/core": "^13.0.0",
+    "bootstrap": "^4.5.2",
+    "firebase": "^7.18.0",
+=======
+    "bootstrap": "^4.5.2",
+>>>>>>> 500a21d4ad3c3f710dc666f1c49d54bf18732aab
+>>>>>>> 5beb4021a4d776907f46770c670088f81747d478
 >>>>>>> develop
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
