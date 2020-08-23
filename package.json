@@ -22,6 +22,10 @@
     "@ngx-translate/core": "^13.0.0",
     "bootstrap": "^3.3.7",
     "firebase": "^7.18.0",
+<<<<<<< HEAD
+=======
+    "rxjs": "~6.5.5",
+>>>>>>> develop
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
   },
