@@ -71,6 +71,6 @@ export class BookFormComponent implements OnInit {
   
   // this method allow to link  <input type="file"> to  onUploadFile() method
  
-  detectFiles(event) {  this.onUploadFile(event.target.files[0]); }
+  detectFiles(event) { this.onUploadFile(event.target.files[0]);}
 
 }
