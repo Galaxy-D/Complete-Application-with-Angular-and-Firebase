@@ -114,8 +114,11 @@ export class BooksService {
       (resolve, reject) => {
         // on crée ici une sorte de fichier unique
         const almostUniqueFileName = Date.now().toString();
-        const upload = firebase.storage().ref()
-          .child('images/' + almostUniqueFileName + file.name).put(file);
+        const upload = firebase
+                              .storage()
+                              .ref()
+                              .child('images/' +'_'+ almostUniqueFileName +'_'+ file.name)
+                              .put(file);
         upload.on(firebase.storage.TaskEvent.STATE_CHANGED,
           () => {
             console.log('Chargement…');
