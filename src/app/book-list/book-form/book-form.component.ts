@@ -13,6 +13,12 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class BookFormComponent implements OnInit {
 
   bookForm: FormGroup;
+  //allow us to know if there is such file wich is uploading
+  fileIsUploading = false;
+  //l'url de l'image a récupérer
+  fileUrl: string;
+  //allow to notice that file is uploaded
+  fileUploaded = false;
 
   constructor(
     private formBuilder: FormBuilder, 
@@ -37,8 +43,34 @@ export class BookFormComponent implements OnInit {
     const synopsis = this.bookForm.get('synopsis').value;
     const newBook = new Book(title, author);
     newBook.synopsis = synopsis;
+    if(this.fileUrl && this.fileUrl !== '') {
+      newBook.photo = this.fileUrl;
+    }
     this.booksService.createNewBook(newBook);
     this.router.navigate(['/books']);
   }
+
+  //this method will fire uploadFile service method and update the DOM content
+
+  /* 
+    You will use fileIsUploading to disable the template's submit button while the file is uploading 
+    to avoid any errors - once the upload is complete, the component saves the returned URL in fileUrl 
+    and changes the state of the component to say uploading is finished.
+  */
+
+  onUploadFile(file: File) {
+    this.fileIsUploading = true;
+    this.booksService.uploadFile(file).then(
+      (url: string) => {
+        this.fileUrl = url;
+        this.fileIsUploading = false;
+        this.fileUploaded = true;
+      }
+    );
+  }
+  
+  // this method allow to link  <input type="file"> to  onUploadFile() method
+ 
+  detectFiles(event) {  this.onUploadFile(event.target.files[0]); }
 
 }
