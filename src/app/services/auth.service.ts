@@ -49,5 +49,21 @@ export class AuthService {
   signOutUser() {
     firebase.auth().signOut();
   }
+  
+  /** 
+  * Initiate the password reset process for this user 
+  * @param email email of the user 
+  */
+
+  resetPassword(email: string) { 
+    return new Promise(
+      (resolve, reject) => {
+        firebase.auth().sendPasswordResetEmail(email,{ url: 'http://localhost:4200/auth' }).then(
+          () => {resolve();},
+          (error) => {reject(error);}
+        );
+      }
+    )    
+  }   
 
 }

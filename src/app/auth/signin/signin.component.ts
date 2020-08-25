@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 })
 export class SigninComponent implements OnInit {
 
+  resetPassword = false;
+
   // user are going to provide information to create an account, so we use reactive forms
   signinForm: FormGroup;
   //this is to display an error message returned by auth service
@@ -54,6 +56,14 @@ export class SigninComponent implements OnInit {
         this.errorMessage = error;
       }
     );
+  }
+
+  sendResetEmail() {
+    const email = this.signinForm.get('email').value;
+    this.authService.resetPassword(email).then(
+      () => {this.resetPassword = true},
+      (error) => {this.errorMessage  = error}
+    )
   }
 
 }
