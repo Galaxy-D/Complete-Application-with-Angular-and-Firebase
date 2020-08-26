@@ -18,6 +18,7 @@ import { HeaderComponent } from './header/header.component';
 import { AuthGuardService } from './services/auth-guard.service';
 import { AuthService } from './services/auth.service';
 import { BooksService } from './services/books.service';
+import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 
 //making route to navigate into main app
 const appRoutes: Routes = [
@@ -38,7 +39,8 @@ const appRoutes: Routes = [
     BookListComponent,
     SingleBookComponent,
     BookFormComponent,
-    HeaderComponent
+    HeaderComponent,
+    FourOhFourComponent
   ],
   imports: [
     BrowserModule,
